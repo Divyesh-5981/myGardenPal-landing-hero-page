@@ -1,0 +1,52 @@
+/* 
+==========
+Global CSS
+==========
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima";
+}
+
+@font-face {
+  font-family: Proxima;
+  src: url(./assets/regular/proximareg/Proxima\ Nova\ Alt\ Regular.otf);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* 
+==========
+CSS Variables
+==========
+*/
+
+:root {
+  --primary-clr: #327466;
+  --secondary-clr: #17b997;
+  --black-clr: #000000;
+  --white-clr: #ffffff;
+  --small-font: 14.7778px;
+  --medium-font: 18px;
+  --large-font: 55.5574px;
+  --letter-spacing: 0.01em;
+  --font-weight: 600;
+}
+
+/* 
+==========
+Header
+==========
+*/
+
+.header {
+  display: flex;
+}
