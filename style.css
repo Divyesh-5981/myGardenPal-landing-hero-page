@@ -23,6 +23,19 @@ Global CSS
   padding-left: 15px;
 }
 
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* 
 ==========
 CSS Variables
@@ -47,6 +60,35 @@ Header
 ==========
 */
 
+/* header {
+  height: 100px;
+} */
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.logo-div {
+  display: flex;
+}
+.logo-div h3 {
+  font-size: 26px;
+}
+.img-wrapper {
+  padding-right: 4.02px;
+}
+.navbar-links-div ul {
+  display: flex;
+}
+.navbar-links-div ul li {
+  padding-right: 31px;
+}
+.search-div img {
+  position: absolute;
+  padding-right: 9.33px;
+  padding-left: 20px;
+}
+.search-div input {
+  padding-left: 43px;
 }
