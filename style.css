@@ -16,18 +16,16 @@ Global CSS
   src: url(./assets/regular/proximareg/Proxima\ Nova\ Alt\ Regular.otf);
 }
 
+body {
+  background: #fbfffe;
+}
+
 .container {
-  max-width: 1140px;
+  max-width: 1185px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
-
-.img {
-  width: 100%;
-  object-fit: cover;
-}
-
 ul {
   list-style: none;
 }
@@ -71,12 +69,20 @@ Header
 }
 .logo-div {
   display: flex;
+  margin-right: 125px;
+  align-items: center;
 }
 .logo-div h3 {
+  font-weight: 700;
   font-size: 26px;
+  color: var(--primary-clr);
+  letter-spacing: -0.005em;
 }
 .img-wrapper {
   padding-right: 4.02px;
+}
+.navbar-links-div {
+  margin-right: 58px;
 }
 .navbar-links-div ul {
   display: flex;
@@ -84,11 +90,181 @@ Header
 .navbar-links-div ul li {
   padding-right: 31px;
 }
+.navbar-links-div ul li a {
+  color: var(--primary-clr);
+  font-weight: 600;
+  font-size: var(--medium-font);
+  letter-spacing: var(--letter-spacing);
+}
+.navbar-links-div ul li a.active {
+  color: var(--secondary-clr);
+}
+.navbar-links-div ul li a.active:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 5px;
+  height: 3px;
+  width: 18px;
+  color: var(--secondary-clr);
+  background: #17b997;
+  box-shadow: 0px 4px 9px rgba(23, 185, 151, 0.41);
+  border-radius: 16px;
+}
+.search-div {
+  display: flex;
+  align-items: center;
+}
 .search-div img {
   position: absolute;
   padding-right: 9.33px;
   padding-left: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 .search-div input {
+  margin-right: 38px;
+  border: none;
   padding-left: 43px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  background: #ddf7f1;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.login-div .login-btn {
+  display: flex;
+  align-items: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  background: #327466;
+  border-radius: 12px;
+  padding-right: 24px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+}
+.login-btn img {
+  padding-right: 8.8px;
+  padding-left: 24px;
+}
+
+/* 
+==========
+Hero Section
+==========
+*/
+
+.hero {
+  display: flex;
+}
+.hero .left-box {
+  flex: 2;
+}
+.hero .right-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.hero-img-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.fueler-link a {
+  display: inline-flex;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primary-clr);
+}
+.fueler-link a span {
+  color: #000000;
+}
+
+.mygardenpal-info .heading {
+  margin-top: 88px;
+}
+.mygardenpal-info .heading .mygardenpal-heading {
+  font-weight: 800;
+  font-size: var(--large-font);
+  line-height: 113%;
+  color: #000000;
+}
+.mygardenpal-info .heading .mygardenpal-heading span {
+  color: var(--secondary-clr);
+}
+.mygardenpal-info .heading .mygardenpal-heading img {
+  position: absolute;
+}
+.mygardenpal-info .mygardenpal-text {
+  margin-top: 28px;
+  margin-bottom: 22px;
+}
+.mygardenpal-info .mygardenpal-text p {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 157.5%;
+  color: var(--primary-clr);
+}
+.volunteer-btn {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16.618px;
+  line-height: 17px;
+  letter-spacing: var(--letter-spacing);
+  color: var(--secondary-clr);
+  background: #ddf7f1;
+  border-radius: 13.4098px;
+  border: none;
+  padding-right: 25px;
+  /* padding-top: 18px;
+  padding-bottom: 18px; */
+  padding-top: 20.77px;
+  padding-bottom: 20.81px;
+  cursor: pointer;
+}
+.volunteer-btn img {
+  padding-left: 27px;
+  padding-right: 11.42px;
+}
+.mygardenpal-services {
+  margin-top: 68px;
+}
+.service-heading h3 {
+  font-weight: 700;
+  font-size: 22px;
+  /* line-height: 27px; */
+  color: #000000;
+}
+.service-sections {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 11px;
+  /* row-gap: 45px; */
+}
+.service-sections .single-service {
+  flex: 33.33%;
+  text-align: center;
+  height: 114px;
+  align-self: baseline;
+}
+.service-sections .single-service img {
+  margin-top: 1.5rem;
+}
+.service-sections .single-service h4 {
+  padding-top: 16.55px;
+  font-weight: 600;
+  font-size: 14.7778px;
+  /* line-height: 15px; */
+  letter-spacing: var(--letter-spacing);
+  color: var(--primary-clr);
+}
+.active-section {
+  background: #ffffff;
+  box-shadow: 0px 6px 31px rgb(180 215 207 / 26%);
+  border-radius: 20px;
 }
