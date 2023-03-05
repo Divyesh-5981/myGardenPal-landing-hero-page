@@ -58,9 +58,10 @@ Header
 ==========
 */
 
-/* header {
-  height: 100px;
-} */
+.icon-times {
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -125,9 +126,10 @@ Header
 .search-div input {
   margin-right: 38px;
   border: none;
+  outline: none;
   padding-left: 43px;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: #ddf7f1;
   border-radius: 12px;
   font-weight: 600;
@@ -136,8 +138,8 @@ Header
 .login-div .login-btn {
   display: flex;
   align-items: center;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: #327466;
   border-radius: 12px;
   padding-right: 24px;
@@ -151,7 +153,21 @@ Header
   padding-right: 8.8px;
   padding-left: 24px;
 }
-
+.mobile-navbar ul li a.active {
+  color: var(--secondary-clr);
+}
+.mobile-navbar ul li a.active:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 5px;
+  height: 3px;
+  width: 105px;
+  color: var(--secondary-clr);
+  background: #17b997;
+  box-shadow: 0px 4px 9px rgba(23, 185, 151, 0.41);
+  border-radius: 16px;
+}
 /* 
 ==========
 Hero Section
@@ -220,16 +236,20 @@ Hero Section
   background: #ddf7f1;
   border-radius: 13.4098px;
   border: none;
-  padding-right: 25px;
-  /* padding-top: 18px;
-  padding-bottom: 18px; */
-  padding-top: 20.77px;
-  padding-bottom: 20.81px;
+  padding: 16px 27px;
   cursor: pointer;
 }
-.volunteer-btn img {
-  padding-left: 27px;
-  padding-right: 11.42px;
+.volunteer-btn div {
+  padding: 5px;
+  width: 27px;
+  height: 27px;
+  background: white;
+  border-radius: 50%;
+  margin-right: 11px;
+}
+.volunteer-btn div img {
+  width: 100%;
+  object-fit: cover;
 }
 .mygardenpal-services {
   margin-top: 68px;
@@ -242,12 +262,14 @@ Hero Section
 }
 .service-sections {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 11px;
   /* row-gap: 45px; */
 }
 .service-sections .single-service {
-  flex: 33.33%;
+  /* flex: 33.33%; */
+  width: 111px;
   text-align: center;
   height: 114px;
   align-self: baseline;
@@ -267,4 +289,258 @@ Hero Section
   background: #ffffff;
   box-shadow: 0px 6px 31px rgb(180 215 207 / 26%);
   border-radius: 20px;
+}
+
+/* Background */
+.bg-color-1 {
+  position: absolute;
+  width: 199px;
+  height: 191.2px;
+  left: -12px;
+  top: 185.9px;
+  background: #d4f9f0;
+  filter: blur(178.291px);
+}
+.bg-color-2 {
+  position: absolute;
+  width: 115px;
+  height: 175px;
+  left: 1368px;
+  top: 436px;
+  background: #ddf7f1;
+  filter: blur(103.032px);
+}
+.bg-color-3 {
+  position: absolute;
+  width: 304.03px;
+  height: 304.03px;
+  left: 1243px;
+  top: 436px;
+  background: #8667de;
+  opacity: 0.14;
+  filter: blur(179px);
+}
+.bg-color-4 {
+  position: absolute;
+  width: 304.03px;
+  height: 304.03px;
+  left: -64px;
+  top: 168px;
+  background: #8667de;
+  opacity: 0.1;
+  filter: blur(179px);
+}
+/*==========
+Hamburger
+============
+*/
+.icon {
+  display: none;
+}
+.icon i {
+  color: var(--primary-clr);
+}
+.mobile-navbar {
+  display: none;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  overflow-x: hidden;
+  background: #d4f9f0;
+}
+.mobile-navbar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 50px 0;
+}
+.mobile-navbar ul li a {
+  color: var(--primary-clr);
+  font-weight: 600;
+  font-size: var(--medium-font);
+  letter-spacing: var(--letter-spacing);
+}
+/* 
+==========
+Media Query 
+==========
+*/
+
+@media (max-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+  /* .background-gredient {
+    display: none;
+  } */
+  .logo-div {
+    margin-right: 50px;
+  }
+  .navbar-links-div ul li {
+    padding-right: 25px;
+    white-space: nowrap;
+  }
+  .fueler-link a {
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    width: 986px;
+  }
+  .logo-div h3,
+  .service-heading h3 {
+    font-size: 20px;
+  }
+  .navbar-links-div ul li a {
+    font-size: 14px;
+  }
+  .login-div .login-btn,
+  .search-div input {
+    font-size: 14px;
+  }
+  .search-div input {
+    margin-right: 20px;
+  }
+  .mygardenpal-info .heading .mygardenpal-heading {
+    font-size: 45px;
+  }
+  .volunteer-btn {
+    font-size: 14px;
+  }
+  .service-sections .single-service {
+    flex: 33.33%;
+  }
+  .fueler-link a {
+    font-size: 16px;
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 1010px) {
+  .container {
+    width: 930px;
+  }
+  .mygardenpal-services,
+  .mygardenpal-info .heading {
+    margin-top: 40px;
+  }
+  .fueler-link a {
+    margin-top: 3.8rem;
+  }
+  .navbar-links-div {
+    margin-right: 40px;
+  }
+  .fueler-link {
+    margin-top: 1.85rem;
+  }
+}
+@media (max-width: 955px) {
+  .container {
+    width: 768px;
+  }
+  /* Hamburger Icon */
+  .icon {
+    display: block;
+  }
+  .mobile-login-div {
+    display: none;
+  }
+  .icon-times {
+    position: relative;
+    z-index: 999;
+    display: none;
+    color: var(--primary-clr);
+  }
+  .navbar-links-div {
+    display: none;
+  }
+  .header {
+    justify-content: space-evenly;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .mygardenpal-info .heading .mygardenpal-heading {
+    text-align: center;
+  }
+  .mygardenpal-info .mygardenpal-text p {
+    padding: 0 8rem;
+    text-align: center;
+  }
+  .volunteer-btn {
+    margin: 0 17rem;
+  }
+  .service-heading {
+    text-align: center;
+  }
+  .service-sections .single-service {
+    flex: none;
+  }
+  .service-sections {
+    flex-wrap: nowrap;
+  }
+  .fueler-link a {
+    margin: 0;
+  }
+  .fueler-link {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 560px;
+  }
+  .logo-div {
+    margin-right: 30px;
+  }
+  .search-div input,
+  .login-div .login-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .volunteer-btn {
+    margin: 0 10rem;
+  }
+  .service-sections .single-service {
+    flex: none;
+    width: 26%;
+  }
+  .service-sections {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 560px) {
+  .container {
+    width: 400px;
+  }
+  .logo-div {
+    margin-right: 0px;
+  }
+  .logo-div h3,
+  .service-heading h3 {
+    font-size: 14px;
+  }
+  .search-div input,
+  .login-div .login-btn {
+    font-size: 10px;
+    margin: 0 0rem;
+  }
+  .volunteer-btn {
+    margin: 0 8rem;
+  }
+  .volunteer-para {
+    white-space: nowrap;
+  }
+  .volunteer-btn {
+    margin: 0 5.7rem;
+  }
+  .mygardenpal-info .mygardenpal-text p {
+    padding: 0 4rem;
+  }
 }
