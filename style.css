@@ -80,7 +80,7 @@ Header
   letter-spacing: -0.005em;
 }
 .img-wrapper {
-  padding-right: 4.02px;
+  margin-right: 4px;
 }
 .navbar-links-div {
   margin-right: 58px;
@@ -112,6 +112,18 @@ Header
   box-shadow: 0px 4px 9px rgba(23, 185, 151, 0.41);
   border-radius: 16px;
 }
+div ul li a:hover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 5px;
+  height: 3px;
+  width: 18px;
+  color: var(--secondary-clr);
+  background: #17b997;
+  box-shadow: 0px 4px 9px rgb(23 185 151 / 41%);
+  border-radius: 16px;
+}
 .search-div {
   display: flex;
   align-items: center;
@@ -134,6 +146,9 @@ Header
   border-radius: 12px;
   font-weight: 600;
   font-size: 16px;
+}
+::placeholder {
+  color: #17b997;
 }
 .login-div .login-btn {
   display: flex;
@@ -274,6 +289,11 @@ Hero Section
   height: 114px;
   align-self: baseline;
 }
+.service-sections .single-service:hover {
+  background: #ffffff;
+  box-shadow: 0px 6px 31px rgb(180 215 207 / 26%);
+  border-radius: 20px;
+}
 .service-sections .single-service img {
   margin-top: 1.5rem;
 }
@@ -340,6 +360,9 @@ Hamburger
 .icon i {
   color: var(--primary-clr);
 }
+.mobile-navbar .mobile-login-div {
+  display: none;
+}
 .mobile-navbar {
   display: none;
   position: absolute;
@@ -366,6 +389,9 @@ Hamburger
   font-size: var(--medium-font);
   letter-spacing: var(--letter-spacing);
 }
+.mobile-navbar {
+  display: none;
+}
 /* 
 ==========
 Media Query 
@@ -375,6 +401,9 @@ Media Query
 @media (max-width: 1200px) {
   .container {
     width: 1100px;
+  }
+  .mobile-navbar {
+    display: none;
   }
   /* .background-gredient {
     display: none;
@@ -444,11 +473,25 @@ Media Query
   .container {
     width: 768px;
   }
+  /* .mobile-navbar .mobile-login-div {
+    display: block;
+  } */
+  .mobile-navbar-links {
+    display: none;
+  }
+  .search-div {
+    display: none;
+  }
+  .mobile-search-div {
+    display: block;
+    border: 1px solid green;
+    border-radius: 12px;
+  }
   /* Hamburger Icon */
   .icon {
     display: block;
   }
-  .mobile-login-div {
+  .mobile-navbar ul {
     display: none;
   }
   .icon-times {
@@ -457,11 +500,11 @@ Media Query
     display: none;
     color: var(--primary-clr);
   }
-  .navbar-links-div {
+  /* .navbar-links-div {
     display: none;
-  }
+  } */
   .header {
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   .hero {
     flex-direction: column;
@@ -472,6 +515,9 @@ Media Query
   .mygardenpal-info .mygardenpal-text p {
     padding: 0 8rem;
     text-align: center;
+  }
+  .navbar-links-div {
+    margin: 0;
   }
   .volunteer-btn {
     margin: 0 17rem;
@@ -496,6 +542,21 @@ Media Query
   .container {
     width: 560px;
   }
+  .mobile-navbar .mobile-login-div {
+    display: block;
+  }
+  .mobile-login-div {
+    display: none;
+  }
+  .mobile-search-div {
+    margin-top: 2rem;
+  }
+  .mobile-search-div input {
+    margin: 0;
+  }
+  .search-div img {
+    padding-top: 10px;
+  }
   .logo-div {
     margin-right: 30px;
   }
@@ -518,6 +579,23 @@ Media Query
 @media (max-width: 560px) {
   .container {
     width: 400px;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .mobile-navbar .mobile-nav-links {
+    display: block;
+  }
+  .mobile-navbar ul li a {
+    font-size: 14px;
+    margin: 2rem;
+    display: flow-root;
+  }
+  .mobile-navbar ul li a.active:after {
+    width: 85px;
+  }
+  .navbar-links-div {
+    display: none;
   }
   .logo-div {
     margin-right: 0px;
