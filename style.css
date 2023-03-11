@@ -231,6 +231,7 @@ Hero Section
   font-size: var(--large-font);
   line-height: 113%;
   color: #000000;
+  font-family: "Proxima-bold";
 }
 .mygardenpal-info .heading .mygardenpal-heading span {
   color: var(--secondary-clr);
@@ -446,7 +447,6 @@ Media Query
     margin-right: 20px;
   }
   .mygardenpal-info .heading .mygardenpal-heading {
-    font-family: "Proxima-bold";
     font-size: 45px;
   }
   .volunteer-btn {
