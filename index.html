@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>myGardenPal</title>
     <link rel="shortcut icon" href="./img/logo-icon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -41,14 +44,14 @@
           </div>
           <!-- Hamburger Menu starts from here -->
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+            <i class="bi bi-list"></i>
           </a>
           <a
             href="javascript:void(0);"
             class="icon-times"
             onclick="myFunction()"
           >
-            <i class="fa fa-times"></i>
+            <i class="bi bi-x"></i>
           </a>
           <!-- Hamburger Menu ends from here -->
         </div>
@@ -60,7 +63,7 @@
     <section>
       <div class="container">
         <!-- Hamburger Menu starts from here -->
-        <div class="mobile-navbar">
+        <div class="mobile-navbar" id="mn">
           <ul class="mobile-nav-links">
             <li><a href="#" class="active"> Home</a></li>
             <li><a href="#">Why Garden?</a></li>

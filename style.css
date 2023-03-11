@@ -16,6 +16,11 @@ Global CSS
   src: url(./assets/regular/proximareg/Proxima\ Nova\ Alt\ Regular.otf);
 }
 
+@font-face {
+  font-family: Proxima-bold;
+  src: url(./assets/DemoFonts/Fontspring-DEMO-proximanova-bold.otf);
+}
+
 body {
   background: #fbfffe;
 }
@@ -34,6 +39,9 @@ a {
   text-decoration: none;
 }
 
+i {
+  font-size: 20px;
+}
 /* 
 ==========
 CSS Variables
@@ -402,7 +410,7 @@ Media Query
   .container {
     width: 1100px;
   }
-  .mobile-navbar {
+  #mn {
     display: none;
   }
   /* .background-gredient {
@@ -438,6 +446,7 @@ Media Query
     margin-right: 20px;
   }
   .mygardenpal-info .heading .mygardenpal-heading {
+    font-family: "Proxima-bold";
     font-size: 45px;
   }
   .volunteer-btn {
