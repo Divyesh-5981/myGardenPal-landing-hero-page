@@ -49,6 +49,7 @@
           <a
             href="javascript:void(0);"
             class="icon-times"
+            id="times-id"
             onclick="myFunction()"
           >
             <i class="bi bi-x"></i>
@@ -165,13 +166,20 @@
     <script>
       const navbar = document.querySelector(".mobile-navbar");
       const hamburger = document.querySelector(".icon");
-      const times = document.querySelector(".icon-times");
+      const times = document.querySelector("#times-id");
       function myFunction() {
-        if (navbar.style.display === "flex") {
-          navbar.style.display = "none";
+        // if (navbar.style.display === "flex") {
+        //   navbar.style.display = "none";
+        //   times.style.display = "none";
+        // } else {
+        //   navbar.style.display = "flex";
+        //   times.style.display = "block";
+        // }
+        if (navbar.classList.contains("hamburger-toggle")) {
+          navbar.classList.remove("hamburger-toggle");
           times.style.display = "none";
         } else {
-          navbar.style.display = "flex";
+          navbar.classList.add("hamburger-toggle");
           times.style.display = "block";
         }
       }

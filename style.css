@@ -68,8 +68,12 @@ Header
 
 .icon-times {
   display: none;
+  position: absolute;
 }
-
+#times-id {
+  z-index: 999;
+  color: #17b997;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -231,7 +235,6 @@ Hero Section
   font-size: var(--large-font);
   line-height: 113%;
   color: #000000;
-  font-family: "Proxima-bold";
 }
 .mygardenpal-info .heading .mygardenpal-heading span {
   color: var(--secondary-clr);
@@ -411,9 +414,6 @@ Media Query
   .container {
     width: 1100px;
   }
-  #mn {
-    display: none;
-  }
   /* .background-gredient {
     display: none;
   } */
@@ -447,6 +447,7 @@ Media Query
     margin-right: 20px;
   }
   .mygardenpal-info .heading .mygardenpal-heading {
+    font-family: "Proxima-bold";
     font-size: 45px;
   }
   .volunteer-btn {
@@ -485,6 +486,15 @@ Media Query
   /* .mobile-navbar .mobile-login-div {
     display: block;
   } */
+  .hamburger-toggle {
+    display: flex;
+  }
+  .icon-times {
+    right: 100px;
+  }
+  .icon-times-toggle {
+    display: block;
+  }
   .mobile-navbar-links {
     display: none;
   }
@@ -503,12 +513,12 @@ Media Query
   .mobile-navbar ul {
     display: none;
   }
-  .icon-times {
+  /* .icon-times {
     position: relative;
     z-index: 999;
     display: none;
     color: var(--primary-clr);
-  }
+  } */
   /* .navbar-links-div {
     display: none;
   } */
